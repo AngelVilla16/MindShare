@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
@@ -8,9 +9,10 @@
         </title>
         <link href="EstiloLogin.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Icono.png" type="image/x-icon">
         
     </head>
-
+    <script src="scriptlogin.js"></script>
     <body>
         <center>
             <div class="login">
@@ -18,13 +20,13 @@
                     <img id="Logo" src="Logo.png" alt="MindShare" widht="150" height="150">
                     <hr>
                     <h2>
-                        <font color="black" face="Poppins">
+                        <font class="fuente" face="Poppins">
                             Bienvenido!
                         </font>
                     </h2>
                     <div class="iniciosesion">
                          <p>
-                        <font color="gray" face="Poppins">
+                        <font class="font" face="Poppins">
                             <h3>
                                 Inicia sesión con tu correo institucional
                                 
@@ -36,7 +38,7 @@
                             Usuario:
                         
                         </label>
-                        <input type="text" id="correo" name="correo_institucional">
+                        <input type="text" id="correo" name="correo_institucional" placeholder="Ingrese su usuario aqui">
                     </div>
 
                     <div class="contraseña">
@@ -52,11 +54,11 @@
                             contraseña: 
 
                         </label>
-                        <input type="password" id="password" name="contraseña_usuario">
+                        <input type="password" id="password" name="contraseña_usuario" placeholder="Ingrese su contraseña aqui">
                     </div>
 
                     <p>
-                        <button type="submit" class="iniciarsesion" > Iniciar sesión </button>
+                        <button type="submit" class="iniciarsesion" id="btnIniciarSesion" > Iniciar sesión  </button>
                     </p>
                     
                     <p>

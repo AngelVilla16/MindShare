@@ -1,11 +1,17 @@
+:root{
+  color-scheme: light dark;
+}
+
 body{
   font-family: 'Poppins', sans-serif;
+  
+  
 }
 
 
 .login{
 
-  background-color: white;
+  background-color: light-dark(white, #121212);
   padding: auto;
   margin:  auto;
 
@@ -31,7 +37,7 @@ background-color: ;
   width: 100%;
   padding: 15px;
   background-color: #4285f4;
-  color: white;
+  color: light-dark(white, #121212);
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -44,4 +50,12 @@ background-color: ;
 .registro{
   color:#4285f4;
   text-decoration: underline;
+}
+
+.fuente{
+  color: light-dark(gray,white)
+}
+.font{
+
+  color: light-dark(gray, white)
 }
