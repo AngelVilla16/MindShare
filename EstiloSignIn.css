@@ -1,0 +1,38 @@
+:root{
+    color-scheme: light dark;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+.registro{
+    background-color: light-dark(white,#121212);
+    
+    padding: 10%;
+    border-radius: 25px;
+    margin:auto;
+     box-shadow: 0 4px 15px rgb(0, 0, 0);
+  text-align: center;
+  width: 350px;
+}
+.nombre{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.apellido{
+      text-align: left;
+    margin-bottom: 20px;
+}
+.correo{
+      text-align: left;
+    margin-bottom: 20px;
+    
+}
+.contraseña{
+      text-align: left;
+    margin-bottom: 20px;
+}
+.confirmarcontraseña{
+      text-align: left;
+    margin-bottom: 20px;
+}

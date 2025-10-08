@@ -1,0 +1,42 @@
+CREATE DATABASE IF NOT EXISTS ForoU;
+USE ForoU;
+
+CREATE TABLE IF NOT EXISTS Alumnos(
+IdAlumno INT AUTO_INCREMENT PRIMARY KEY,
+Nombre VARCHAR(100),
+ApellidoP VARCHAR(100),
+ApellidoM VARCHAR(100),
+Correo VARCHAR(100),
+Contraseña VARCHAR(100)
+
+
+
+);
+
+CREATE TABLE IF NOT EXISTS Post(
+IdPost INT AUTO_INCREMENT PRIMARY KEY,
+IdAlumno INT,
+Titulo VARCHAR (100),
+Contenido TEXT,
+Fecha TIMESTAMP  DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY(IdAlumno) REFERENCES Alumnos(IdAlumno)
+
+
+
+
+);
+CREATE TABLE IF NOT EXISTS Comentarios(
+IdComentario INT AUTO_INCREMENT PRIMARY KEY,
+IdPost INT,
+IdAlumno INT,
+Contenido TEXT,
+Fecha TIMESTAMP DEFAULT current_timestamp,
+FOREIGN KEY (IdPost) REFERENCES Post(IdPost),
+FOREIGN KEY(IdAlumno) REFERENCES Alumnos(IdAlumno)
+
+
+
+);
+
+select * from Alumnos;
+

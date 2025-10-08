@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="EstiloSignIn.css" rel="stylesheet">
+        <title> Registrarse </title>
+        <link rel="icon" href="Icono.png" type="image/x-icon">
+    </head>
+     <script src="scriptmostrar.js"></script>
+    <body>
+       <center>
+         <div class="registro">
+            <h2 id="Titulo">
+                Bienvenido!
+            </h2>
+            <p id="Etiqueta">
+                Por favor rellene los campos para confirmar su registro
+            </p>
+            <div class="nombre">
+                <label for="nombre">
+                    Ingrese su nombre: 
+
+                </label>
+                <input type="text" id="nombreusuario" name="nombre_usuario">
+
+            </div>
+            <p>
+                <div class="apellido">
+                    <label for="apellido">
+                        Ingrese su apellido:
+                    </label>
+                    <input type="text" id="apellidousuario" name="apellido_usuario">
+
+                </div>
+            </p>
+            <p>
+                <div class="correo">
+                    <label for="correo"> 
+                        Ingrese su correo institucional (utcj.edu.mx):
+                    </label>
+                    <input type="text" id="correoinstitucional" name="correo_institucional" width="255.8">
+                    
+                </div>
+            </p>
+            <p>
+                <div class="contraseña">
+                    <label for="contraseña">
+                        Ingrese su contraseña: 
+                    </label>
+                    <input type="password" id="contraseña" name="contraseña_alumno">
+                   
+                </div>
+            </p>
+            <p>
+                <div class="confirmarcontraseña">
+                    <label for="confirmarcontraseña">
+                        Ingrese nuevamente su contraseña: 
+                    </label>
+                    <input type="password" id="contraseñaconfirm" name="contraseña_confirm">
+                </div>
+            </p>
+           
+            <p align="center">
+                 <button type="button " id="mostrarcontraseña"> Mostrar contraseña</button>
+
+            </p>
+
+            <p>
+                <button type="button" id="confirmar" >
+                    Confirmar registro
+
+                </button>
+            </p>
+            
+        </div>
+       </center>
+
+
+    </body>
+    
+</html>

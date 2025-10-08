@@ -12,6 +12,7 @@
         <link rel="icon" href="Icono.png" type="image/x-icon">
         
     </head>
+       <script src="scriptmostrar.js"></script>
     <script src="scriptlogin.js"></script>
     <body>
         <center>
@@ -19,7 +20,7 @@
                 <center>
                     <img id="Logo" src="Logo.png" alt="MindShare" widht="150" height="150">
                     <hr>
-                    <h2>
+                    <h2 class="title">
                         <font class="fuente" face="Poppins">
                             Bienvenido!
                         </font>
@@ -27,18 +28,20 @@
                     <div class="iniciosesion">
                          <p>
                         <font class="font" face="Poppins">
-                            <h3>
+                            <h3 class="subtitle">
                                 Inicia sesión con tu correo institucional
                                 
                             </h3>
                     </div>
 
-                    <div class="usuario">
-                        <label for="usuario">
+                   <div class="CamposLogin">
+                     <div class="usuario">
+                       
+                         <label for="usuario">
                             Usuario:
                         
                         </label>
-                        <input type="text" id="correo" name="correo_institucional" placeholder="Ingrese su usuario aqui">
+                        <input type="text" id="correo" name="correo_institucional" placeholder="Ingrese su usuario aqui" required>
                     </div>
 
                     <div class="contraseña">
@@ -54,24 +57,63 @@
                             contraseña: 
 
                         </label>
-                        <input type="password" id="password" name="contraseña_usuario" placeholder="Ingrese su contraseña aqui">
+                        <input type="password" id="password" name="contraseña_usuario" placeholder="Ingrese su contraseña aqui" required>
+                        <p>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function(){
+
+                                    const password = document.getElementById("password");
+                                    const mostrar = document.getElementById("btnMostrarContraseña");
+
+                                    mostrar.addEventListener("click", function(){
+
+                                        const tipo = password.getAttribute("type") == "password" ? "text" : "password";
+
+                                        password.setAttribute("type", tipo);
+
+                                    });
+
+
+                                });
+                            </script>
+                            
+                            <button type="button" class="mostrarcontraseña" id="btnMostrarContraseña"> Mostrar contraseña</button>
+                        </p>
+
+                         <p>
+                        <button type="submit" class="iniciarsesion" id="btnIniciarSesion" > Iniciar sesión  </button>
+                        </p>
+                       
                     </div>
 
-                    <p>
-                        <button type="submit" class="iniciarsesion" id="btnIniciarSesion" > Iniciar sesión  </button>
-                    </p>
+                   
                     
                     <p>
-                        ¿No tienes una cuenta? Puedes registrar tu correo institucional <a href="" class="registro"> aqui </a>
+                        ¿No tienes una cuenta? Puedes registrar tu correo institucional <a href="signin.html" class="registro"> aqui </a>
                     </p>
 
 
                         </font>
                     </p>
+                   </div>
                 </center>
 
             </div>
+
+            <div class="info">
+
+                <h1> Bienvenido a MindShare </h1>
+                <hr>
+                <p class="acercade">
+                    <font face="Poppins">
+                        Un lugar para compartir ideas, tips de estudio y apoyarse mutuamente como comunidad estudiantil.
+                    </font>
+                </p>
+
+            </div>
         </center>
+
+
             
 
 

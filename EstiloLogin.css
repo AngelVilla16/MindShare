@@ -1,61 +1,53 @@
 :root{
-  color-scheme: light dark;
+    color-scheme: light dark;
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
-  
-  
+    font-family: "Poppins", sans-serif;
 }
-
-
 .login{
-
-  background-color: light-dark(white, #121212);
-  padding: auto;
-  margin:  auto;
-
-background-color: ;
-  padding: 10%;
-  border-radius: 30px;
-  box-shadow: 0 4px 15px rgb(0, 0, 0);
+    background-color: light-dark(white,#121212);
+    display: flex;
+    padding: 10%;
+    border-radius: 25px;
+    margin:auto;
+     box-shadow: 0 4px 15px rgb(0, 0, 0);
   text-align: center;
   width: 350px;
 }
-
-.usuario{
-  text-align: left;
-  margin-bottom: 20px;
+.info{
+     background-color: light-dark(white,#121212);
+     display: flex;
+     position: relative;
+     justify-content: center;
+    flex-direction: column;
+    
+    padding: 10%;
+    border-radius: 25px;
+    margin:0;
+     box-shadow: 0 4px 15px rgb(0, 0, 0);
+  text-align: center;
+  width: 350px;
 
 }
-
-.contraseñausuario{
-  text-align: left;
-  margin-bottom: 20px;
+.nombre{
+    text-align: left;
+    margin-bottom: 20px;
 }
-.iniciarsesion{
-  width: 100%;
-  padding: 15px;
-  background-color: #4285f4;
-  color: light-dark(white, #121212);
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
+.apellido{
+      text-align: left;
+    margin-bottom: 20px;
 }
-
-.registro{
-  color:#4285f4;
-  text-decoration: underline;
+.correo{
+      text-align: left;
+    margin-bottom: 20px;
+    
 }
-
-.fuente{
-  color: light-dark(gray,white)
+.contraseña{
+      text-align: left;
+    margin-bottom: 20px;
 }
-.font{
-
-  color: light-dark(gray, white)
+.confirmarcontraseña{
+      text-align: left;
+    margin-bottom: 20px;
 }
