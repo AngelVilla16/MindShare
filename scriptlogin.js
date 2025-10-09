@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //Obtenemos el elemento del documento al que se le va a agregar la funcion 
 const boton = document.getElementById("btnIniciarSesion");
-const correo = document.getElementById("correo");
+const correo = document.getElementById("Correo");
 let valor = correo.value;
 
 let dominio = valor.split("@")[1];
