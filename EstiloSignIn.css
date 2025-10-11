@@ -1,38 +1,23 @@
-:root{
-    color-scheme: light dark;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-    font-family: "Poppins", sans-serif;
+    background: linear-gradient(90deg, #FF2CDF, #0014FF);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
+
 .registro{
-    background-color: light-dark(white,#121212);
-    
-    padding: 10%;
-    border-radius: 25px;
-    margin:auto;
-     box-shadow: 0 4px 15px rgb(0, 0, 0);
-  text-align: center;
-  width: 350px;
-}
-.nombre{
-    text-align: left;
-    margin-bottom: 20px;
-}
-.apellido{
-      text-align: left;
-    margin-bottom: 20px;
-}
-.correo{
-      text-align: left;
-    margin-bottom: 20px;
-    
-}
-.contraseña{
-      text-align: left;
-    margin-bottom: 20px;
-}
-.confirmarcontraseña{
-      text-align: left;
-    margin-bottom: 20px;
+    flex: 1;
+    text-align: center;
+    width: auto;
+    height: 100%;
+   
+    padding: 40px;
+   
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.233);
 }

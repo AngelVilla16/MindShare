@@ -58,6 +58,12 @@
                     <button type="submit" class="btnIniciarSesion" id="btnIniciarSesion" > Iniciar sesión  </button>
                    </p>
 
+                   <p class="enlace">
+
+                    ¿No esta registrado aun? Puede registrarse <a class="link" href="signin.html"> aqui </a>
+
+                   </p>
+
                 </div>
               <div class="contenedorfondo">
                   <div class="contenedorinfo">
