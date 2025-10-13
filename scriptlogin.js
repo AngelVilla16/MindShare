@@ -2,29 +2,31 @@
 //Creamos un evento mas bien añadimos un evento con una funcion al documento
 document.addEventListener("DOMContentLoaded", function(){
 
-    //Obtenemos el elemento del documento al que se le va a agregar la funcion 
-const boton = document.getElementById("btnIniciarSesion");
-const correo = document.getElementById("Correo");
-let valor = correo.value;
 
-let dominio = valor.split("@")[1];
-//creamos un evento de click en el boton anteriormente obtenido
-boton.addEventListener("click", function(){
+    const boton = document.getElementById("btnIniciarSesion");
+    const inputCorreo = document.getElementById("Correo");
+    const inputPassword = document.getElementById("Contraseña");
 
-    //mensaje de inicio de sesion.
-
-    if(dominio == "utcj.edu.mx"){
-
-        alert("inicio de sesion correcto");
-        return;
-    }
-    else{
-         alert("Inicio de sesión denegado");
-         return;
-    }
 
    
-});
+    boton.addEventListener("click", function(){
 
-});
 
+
+        const correo = inputCorreo.value.trim();
+        const password = inputPassword.value.trim();
+        const subcorreo = correo.slice(10,21);
+        const valor = "@utcj.edu.mx";
+        
+
+       
+        if (correo === "" || password === "") {
+            alert("Por favor, llene todos los campos");
+            return; // Detiene la ejecución si hay campos vacíos
+        }
+
+      
+      
+
+    });
+});

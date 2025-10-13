@@ -8,7 +8,7 @@
             Iniciar sesión
         </title>
         <link href="EstiloLogin.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
         <link rel="icon" href="Icono.png" type="image/x-icon">
         
     </head>
@@ -35,28 +35,15 @@
                     <label for="Contraseña"> Contraseña: </label>
                     <input type="password" id="Contraseña" name="contraseña_usuario" placeholder="******" required>
                    </p>
-                    <script>
-                    document.addEventListener("DOMContentLoaded", function(){
-
-                        const password = document.getElementById("Contraseña");
-                        const mostrar = document.getElementById("btnMostrarContraseña");
-
-                        mostrar.addEventListener("click", function(){
-
-                        const tipo = password.getAttribute("type") == "password" ? "text" : "password";
-
-                        password.setAttribute("type", tipo);
-
-                        });
-
-                        });
-                    </script>
+             
                    <p>
-                    <button type="button" class="MostrarContraseña" id="btnMostrarContraseña"> Mostrar contraseña</button>
+                    <label for="ContraseñaMostrar"> Mostrar contraseña</label>
+                   <input class="checkpassword" type="checkbox" onclick="Contraseña.type = this.checked ? 'text' : 'password' ">
                    </p> 
                    <p>
                     <button type="submit" class="btnIniciarSesion" id="btnIniciarSesion" > Iniciar sesión  </button>
                    </p>
+               
 
                    <p class="enlace">
 
