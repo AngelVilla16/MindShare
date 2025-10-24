@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+    color-scheme: light dark;
+}
+body{
+    background: light-dark(white,#121212);
+    
+    background-size: cover;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+.contenedorprincipal{
+    display: flex;
+    flex-direction: column;
+
+
+    
+}
+.navbar{
+    border: 1px solid white;
+    display:flex;
+    width: auto;
+    height: auto;
+}
+.sidebar{
+    border: 1px solid white;
+     display:flex;
+    width: auto;
+    height: auto;
+}
+.main{
+    border: 1px solid white;
+     display:flex;
+    width: auto;
+    height: auto;
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .contenedorprincipal {
+        min-height: 100vh;
+        
+       
+        display: grid; 
+        gap: 20px;
+        
+        
+        grid-template-columns: 100px 1fr;
+        
+        
+        grid-template-rows: 60px auto; 
+
+       
+        grid-template-areas: 
+            "navbar navbar"
+            "sidebar main";
+            
+      
+    }
+    
+    .navbar {
+        grid-area: navbar;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+   
+    .main { 
+        grid-area: main;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .contenedorprincipal {
+        min-height: 100vh;
+        
+       
+        display: grid; 
+        gap: 20px;
+        
+        
+        grid-template-columns: 100px 1fr;
+        
+        
+        grid-template-rows: 60px auto; 
+
+       
+        grid-template-areas: 
+            "navbar navbar"
+            "sidebar main";
+            
+      
+    }
+    
+    .navbar {
+        grid-area: navbar;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+   
+    .main { 
+        grid-area: main;
+    }
+}
+@media (min-width: 1201px) {
+    .contenedorprincipal {
+        min-height: 100vh;
+        
+       
+        display: grid; 
+        gap: 20px;
+        
+        
+        grid-template-columns: 100px 1fr;
+        
+        
+        grid-template-rows: 60px auto; 
+
+       
+        grid-template-areas: 
+            "navbar navbar"
+            "sidebar main";
+            
+      
+    }
+    
+    .navbar {
+        grid-area: navbar;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+   
+    .main { 
+        grid-area: main;
+    }
+}
