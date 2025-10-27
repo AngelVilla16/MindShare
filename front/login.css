@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Pantalla completa */
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+    height: 100vh;
+}
+
+/* Sección izquierda (logo) */
+.izquierda {
+   flex: 1;
+    background: linear-gradient(to top, #005C97,#363795);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: antiquewhite;
+}
+
+.logo{
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.izquierda h1{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size:28px ;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.derecha{
+    flex: 1;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    width: 80%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.login h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.input-group{
+  
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.login button{
+    width: 100%;
+    background: #005C97;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.login button:hover{
+    background-color: #111251 ;
+}
+
+.login p{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+.login a{
+    color: #005C97;
+    text-decoration: none;
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+  .contenedor {
+    flex-direction: column;
+    height: auto; /* Permite que crezca según el contenido */
+  }
+
+  .izquierda,
+  .derecha {
+    flex: none;
+    width: 100%;
+    height: auto; /* Evita que el login se encime */
+    padding: 40px 0; /* Añade espacio interno */
+  }
+
+  .izquierda {
+    text-align: center;
+  }
+
+  .login {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto; /* Centra el formulario */
+    box-shadow: none;
+  }
+}
