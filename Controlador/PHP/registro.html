@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../CSS/registro.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="izquierdo">
+            <div class="logo">
+             
+                <img src="../../Vista/src/images/Logo.png" width="200" height="200" alt="Logo Mindshare">
+            </div>
+            <h2>Donde las ideas se unen y el aprendizaje fluye.</h2>
+        </div>
+
+        <div class="derecho">
+            <div class="login">
+                <h2>Registrarse</h2>
+
+                <form action="guardar.php" method="POST">
+                    <div class="input-group">
+                        <label for="nombre">Nombre:</label>
+                        <input id="nombre" name="Nombre" type="text" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="apellido">Apellido:</label>
+                        <input id="apellido" name="Apellido" type="text" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="correo">Correo institucional:</label>
+                        <input id="correo" name="Email" type="email" required placeholder="al0000000@utcj.edu.mx">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="pass">Contraseña:</label>
+                        <input name="password" id="pass" type="password" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="passcon">Confirmar contraseña:</label>
+                        <input name="passwordcon" id="passcon" type="password" required>
+                    </div>
+
+                    <div class="mostrar-contraseña">
+                        <input id="check" type="checkbox">
+                        <label for="check">Mostrar contraseña</label>
+                    </div>
+
+                    <div class="input-group">
+                        <button type="submit">Enviar registro</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
