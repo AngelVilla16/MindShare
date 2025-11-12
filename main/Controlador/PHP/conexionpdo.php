@@ -4,7 +4,7 @@
 $servidor="localhost";
 $bd="Mindshare";
 $usuario="root";
-$pass="";
+$pass="277353";
 
 try{
     //Crear conexion pdo
