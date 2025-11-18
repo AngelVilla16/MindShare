@@ -1,16 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["Correo"])) {
-    header("Location: index.php");
-    exit();
-}
-
-$nombre = $_SESSION["Nombre"];
-//$apellido = $_SESSION['Apellido'];
-
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,14 +20,26 @@ $nombre = $_SESSION["Nombre"];
 
             <div class="formularioperfil">
                 <label for="nombredeusuario">
-                    Nombre de usuario: 
-                    <?php echo htmlspecialchars($nombre);
-                    ?>
+                    Nombre de usuario:
                 </label>
                 <input type="text" id="cambiarnombre" placeholder="Nuevo nombre">
                 <button type="submit "> enviar cambio </button>
 
+            </div><label for="fotoperfil"> Cambiar foto</label>
+
+                <div class="formularioperfil">
+                    <label for="nombredeusuario">
+                        Nombre de usuario:
+                    </label>
+                    <input type="text" id="cambiarnombre" placeholder="Nuevo nombre">
+                    <button id="btnEnviarCambios"> enviar cambio </button></div>
+
+                </div>
+
             </div>
+                <script src="../JS/perfil.js"></script>
+            </body>
+            </html>
 
         </div>
 

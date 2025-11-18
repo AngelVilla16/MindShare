@@ -36,65 +36,70 @@ body {
   min-height: 100vh;
 }
 .navbar {
-  border-bottom: 1px solid var(--border-color);
-  padding: 12px 15px;
-  background-color: var(--bg-color);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 15px;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-/* Contenedor del menú */
 .navbar .menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Ítems principales */
-.navbar li {
-  position: relative;
-  list-style: none;
+.navbar .menu > li {
+    position: relative; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Submenú oculto */
-.navbar li ul {
-  display: none;
-  position: absolute;
-  top: 100%; /* Debajo del icono */
-  left: 0;
-  background: var(--bg-color);
-  padding: 10px 0;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
+.search-item {
+    margin-left: auto;
+    flex: 1;
+}
+
+
+.search-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--search-bg);
+    color: var(--text-color);
+    width: 100%;
+}
+.navbar .menu > li > ul { 
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; 
+    right: 0; 
+    min-width: 150px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 5px 0;
+    list-style: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 20;
 }
 
 /* Mostrar submenú al pasar el mouse */
-.navbar li:hover > ul {
-  display: block;
+.navbar .menu > li:hover > ul {
+    display: block;
+}
+.navbar .menu > li > ul li {
+    padding: 8px 15px;
+    display: block;
 }
 
-/* Estilo de items del submenú */
-.navbar li ul li {
-  padding: 8px 15px;
-  display: flex;
-  align-items: center;
-}
 
-.navbar li ul li:hover {
-  background-color: #eee;
-}
 
-/* Quitar diseño raro al input de búsqueda */
-.search-item {
-  margin-left: auto;
-}
-
-.search-input {
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
-}
 
 .main {
   max-width: 600px;

@@ -29,12 +29,9 @@
       <div class="login">
         <h2>Iniciar sesión</h2>
         <form action="../../Controlador/PHP/iniciar.php" method="POST">
-          <div class="cf-turnstile" 
-           
-          </div>
+     
         
-    
-          <hr>
+  
           <?php
             if(isset($_GET["Error"])){
           ?>

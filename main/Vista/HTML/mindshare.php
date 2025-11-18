@@ -23,32 +23,25 @@ $nombre = $_SESSION["Nombre"];
 </head>
 <body>
   <div class="contenedorprincipal">
- <nav class="navbar">    
+ <nav class="navbar">    
     <ul class="menu">
-        <li>
-           
-            <ul>
-                        <li>
-                    <a href="../HTML/editarperfil.php">
-                        <img src="../src/images/usuario.png" alt="Perfil de Usuario" width="40" height="40">
-                    </a>
-                </li>
-                <li>
-                    <a href="../HTML/nuevopost.html">
-                        <img src="../src/images/nuevopost.png" alt="Crear Nueva Publicación" width="40" height="40">
-                    </a>
-                </li>
-                <li>
-                    <a href="../../Controlador/PHP/cerrar.php"> Cerrar sesión</a>
-                </li>
-                
+        <li class="user-options-container">
+             <a href="#">
+                 <img src="../src/images/usuario.png" alt="Perfil de Usuario" width="40" height="40">
+            </a>
+            
+            <ul class="submenu-options">
+                <li><a href="../HTML/editarperfil.php">Editar Perfil</a></li>
+                <li><a href="../HTML/nuevopost.html">Crear Publicación</a></li>
+                <li><a href="../../Controlador/PHP/cerrar.php">Cerrar sesión</a></li>
             </ul>
         </li>
         
         <li class="search-item"> 
             <input type="text" placeholder="buscar por palabra clave" class="search-input">
         </li>
-    </ul>
+        
+        </ul>
 </nav>
     <div class="main">
 
