@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,9 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mindshare</title>
  <link rel="stylesheet" href="../CSS/login.css">
+ <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 
 </head>
 <body>
+  <div class="captcha-container"
+     data-sitekey="0x4AAAAAACA2cfWM9xMG9_JL"
+    data-callback="captchaValidado">
+</div>
   <div class="contenedor">
     <div class="izquierda">
       <div class="logo">
@@ -20,6 +29,11 @@
       <div class="login">
         <h2>Iniciar sesión</h2>
         <form action="../../Controlador/PHP/iniciar.php" method="POST">
+          <div class="cf-turnstile" 
+           
+          </div>
+        
+    
           <hr>
           <?php
             if(isset($_GET["Error"])){
@@ -41,6 +55,8 @@
             <label for="password">Contraseña</label>
             <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" required>
           </div>
+      
+
 
           <button type="submit">Iniciar sesión</button>
 
@@ -48,5 +64,9 @@
         </form>
       </div>
     </div>
+
+ 
+
+
 </body>
 </html>

@@ -35,7 +35,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 .navbar {
   border-bottom: 1px solid var(--border-color);
   padding: 12px 15px;
@@ -45,44 +44,56 @@ body {
   z-index: 10;
 }
 
-.navbar ul {
-  list-style: none;
+/* Contenedor del menú */
+.navbar .menu {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Ítems principales */
 .navbar li {
+  position: relative;
+  list-style: none;
+}
+
+/* Submenú oculto */
+.navbar li ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Debajo del icono */
+  left: 0;
+  background: var(--bg-color);
+  padding: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.navbar li:hover > ul {
+  display: block;
+}
+
+/* Estilo de items del submenú */
+.navbar li ul li {
+  padding: 8px 15px;
   display: flex;
   align-items: center;
 }
 
-.navbar a img {
-  width: 36px;
-  height: 36px;
-  object-fit: cover;
+.navbar li ul li:hover {
+  background-color: #eee;
 }
 
-
+/* Quitar diseño raro al input de búsqueda */
 .search-item {
-  flex-grow: 1;
-  min-width: 160px;
+  margin-left: auto;
 }
 
 .search-input {
-  width: 100%;
-  padding: 8px 12px;
-  background-color: var(--search-bg);
-  color: var(--text-color);
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  outline: none;
-}
-.search-input::placeholder {
-  color: #999;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
 }
 
 .main {

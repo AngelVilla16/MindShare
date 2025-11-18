@@ -14,12 +14,12 @@
                 <h1>
                     Nueva publicación
                 </h1>
-                <form class="post">
-                    <input type="file" >
+                <form class="post" action="../../Modelo/enviarpost.php" method="POST">
+                    <input name="archivo" type="file" >
                     <label for="titulo"> Encabezado </label>
-                    <input type="text">
-                    <textarea placeholder="Escribe tu descripcion, ideas, o deja fluir tu imaginacion"> </textarea>
-                    <input type="submit">
+                    <input name="encabezado" type="text">
+                    <textarea name="cuerpo" placeholder="Escribe tu descripcion, ideas, o deja fluir tu imaginacion"> </textarea>
+                    <input name="enviar" type="submit">
 
 
                 </form>

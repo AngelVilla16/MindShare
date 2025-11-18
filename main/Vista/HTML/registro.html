@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <link rel="stylesheet" href="../CSS/registro.css">
+   
 </head>
 <body>
     <div class="contenedor">
@@ -20,7 +21,7 @@
             <div class="login">
                 <h2>Registrarse</h2>
 
-                <form action="guardar.php" method="POST">
+                <form action="../../Modelo/guardar.php" method="POST">
                     <div class="input-group">
                         <label for="nombre">Nombre:</label>
                         <input id="nombre" name="Nombre" type="text" required>
@@ -28,7 +29,7 @@
 
                     <div class="input-group">
                         <label for="apellido">Apellido:</label>
-                        <input id="apellido" name="Apellido" type="text" required>
+                        <input id="Apellido" name='Apellido' type="text" required>
                     </div>
 
                     <div class="input-group">
@@ -52,7 +53,11 @@
                     </div>
 
                     <div class="input-group">
-                        <button type="submit">Enviar registro</button>
+                        <button id="enviar" type="submit">Enviar registro</button>
+                        <script src="../JS/mostrarpassword.js"> </script>
+
+                   
+                      
                     </div>
                 </form>
 

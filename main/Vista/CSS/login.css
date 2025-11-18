@@ -42,6 +42,13 @@ body, html {
   background: var(--color-bg);
   color: var(--color-text);
 }
+.captcha-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
 
 .contenedor {
   display: flex;
