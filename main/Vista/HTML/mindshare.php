@@ -19,9 +19,10 @@ $nombre = $_SESSION["Nombre"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/estilomain.css"> 
+    <script src="../JS/post.js"></script>
     <title>MindShare - Feed</title>
 </head>
-<body>
+<body onload="cargarpost()">
   <div class="contenedorprincipal">
  <nav class="navbar">    
     <ul class="menu">
@@ -45,25 +46,13 @@ $nombre = $_SESSION["Nombre"];
 </nav>
     <div class="main">
 
-        <!--<div class="post">
-            <section class="contenedorpublicacion">
-                <div class="infousuario">
-                    <img class="iconousuario" src="" alt="imagen usuario">
-                    <label class="nombreusuario"> 
-                        <?php 
-                            echo htmlspecialchars($nombre );
-                        ?>
-
-                    </label>
-
-                </div>
-                <div class="contenido">
-                    <img src="" alt="contenido" width="400px " >
+        <div  id="publicaciones">
+            
                 </div>
                 
             </section>
         </div>
--->
+
     </div>
   </div>
 </body>

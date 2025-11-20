@@ -117,8 +117,21 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #005ecc;
 }
+.salir{
+   background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-
+.salir::hover{
+    background-color: #005ecc;
+}
 @media (max-width: 600px) {
   .contenedorformprincipal {
     padding: 20px 15px;
@@ -145,3 +158,4 @@ input[type="submit"]:hover {
     padding: 10px;
   }
 }
+

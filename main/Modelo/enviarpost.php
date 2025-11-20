@@ -27,11 +27,11 @@ if(isset($_POST['encabezado']) && isset($_POST['cuerpo'])){
 
     $encabezado = $_POST['encabezado'];
     $cuerpo = $_POST['cuerpo'];
-
-    $sql = "INSERT INTO Post(Encabezado, Cuerpo, IdAlumno) VALUES (?, ?, ?)";
+    $fecha = date('Y-m-d H:i:s');
+    $sql = "INSERT INTO Post(Encabezado, Cuerpo, IdAlumno, Fecha) VALUES (?, ?, ?,?)";
     $stmtinsertar =  $pdo->prepare($sql);
 
-    if ($stmtinsertar->execute([$encabezado, $cuerpo, $idobtenido])) {
+    if ($stmtinsertar->execute([$encabezado, $cuerpo, $idobtenido, $fecha])) {
 
         echo "<script>
             alert('Post subido exitosamente');
@@ -40,6 +40,7 @@ if(isset($_POST['encabezado']) && isset($_POST['cuerpo'])){
         exit();
     }
 }
+
 
 
 

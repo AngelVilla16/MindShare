@@ -44,13 +44,12 @@ body {
     z-index: 10;
 }
 
+.navbar ul,
 .navbar .menu {
     display: flex;
     align-items: center;
     gap: 15px;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .navbar .menu > li {
@@ -62,7 +61,8 @@ body {
 
 .search-item {
     margin-left: auto;
-    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -72,32 +72,37 @@ body {
     border: 1px solid var(--border-color);
     background-color: var(--search-bg);
     color: var(--text-color);
-    width: 100%;
+    width: 200px;
 }
+
 .navbar .menu > li > ul { 
-    display: none; /* Oculto por defecto */
+    display: none;
     position: absolute;
-    top: 100%; 
-    right: 0; 
-    min-width: 150px;
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    padding: 5px 0;
-    list-style: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
     z-index: 20;
 }
 
-/* Mostrar submenú al pasar el mouse */
 .navbar .menu > li:hover > ul {
     display: block;
 }
+
 .navbar .menu > li > ul li {
-    padding: 8px 15px;
+    padding: 0;
     display: block;
+    text-align: left;
 }
 
+.navbar .menu > li > ul li a {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.navbar .menu > li > ul li:hover {
+    background-color: var(--search-bg);
+}
 
 
 
