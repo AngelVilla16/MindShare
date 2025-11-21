@@ -28,11 +28,11 @@ $nombre = $_SESSION["Nombre"];
     <ul class="menu">
         <li class="user-options-container">
              <a href="#">
-                 <img src="../src/images/usuario.png" alt="Perfil de Usuario" width="40" height="40">
+                 <img src="../src/images/navbar.png" alt="Menu" width="40" height="40">
             </a>
             
             <ul class="submenu-options">
-                <li><a href="../HTML/editarperfil.php">Editar Perfil</a></li>
+                <li><a href="../HTML/editarperfil.html">Editar Perfil</a></li>
                 <li><a href="../HTML/nuevopost.html">Crear Publicación</a></li>
                 <li><a href="../../Controlador/PHP/cerrar.php">Cerrar sesión</a></li>
             </ul>
@@ -48,9 +48,9 @@ $nombre = $_SESSION["Nombre"];
 
         <div  id="publicaciones">
             
-                </div>
                 
-            </section>
+                
+            
         </div>
 
     </div>

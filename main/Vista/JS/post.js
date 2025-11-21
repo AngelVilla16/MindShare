@@ -20,11 +20,20 @@ function mostrarPost(posts) {
         div.classList.add("post");
 
         div.innerHTML = `
-    <h3>${p.Encabezado}</h3>
-    <p>${p.Cuerpo}</p>
-    <span class="fecha">${new Date(p.Fecha).toLocaleString()}</span>
-`;
+            <div class="post-header">
+                <img src="../src/images/usuario.png" alt="user" class="user-img">
+                
+                <div class="post-info">
+                <h4 class="post-user"> ${p.NombreUsuario} </h4>
+                 <h3 class="post-title">${p.Encabezado}</h3>
+                </div>
+                
+            </div>
 
+            <p class="post-body">${p.Cuerpo}</p>
+
+            <span class="fecha">${new Date(p.Fecha).toLocaleString()}</span>
+        `;
 
         feed.appendChild(div);
     });

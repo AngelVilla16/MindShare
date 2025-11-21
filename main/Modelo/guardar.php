@@ -2,36 +2,25 @@
 
 //Datos de conexion 
 
-
-
-$Servidor = "localhost";
-$Usuario = "root";
-$Pass = "277353";
-$Bd = "Mindshare";
-
-
-$con = mysqli_connect($Servidor, $Usuario, $Pass, $Bd);
-
-if(!$con){
-    die("Error de conexion: ". mysqli_connect_error());
-}
 include("../Controlador/PHP/conexionclases.php");
+
 function repetir(){
    
    $db_conexion = new Conexion();
     $pdo = $db_conexion->getConexion();
+    
    $correo = $_POST["Email"];
+    $nombreusuario = $_POST["Usuario"];
+   $stmt = $pdo->prepare("SELECT Correo, NombreUsuario FROM Alumnos WHERE Correo = ? AND NombreUsuario = ?");
 
-   $stmt = $pdo->prepare("SELECT Correo FROM Alumnos WHERE Correo = ?");
-
-   $stmt -> execute([$correo]);
+   $stmt -> execute([$correo, $nombreusuario]);
 
    $datoobtenido = $stmt->fetch(PDO::FETCH_ASSOC) ;
    
    if($datoobtenido){
 
     echo "<script>
-            alert('El usuario ya esta registrado');
+            alert('El correo o el nombre de usuario ya esta registrado');
             window.location.href = '../Vista/HTML/registro.html';
             </script>";
     exit();
@@ -40,20 +29,23 @@ function repetir(){
 }
 
 if (isset($_POST['Nombre'])) {
+    $Nombre = $_POST['Nombre'] ?? '';
+    $Apellido = $_POST['Apellido'] ?? '';
+    $User = $_POST['Usuario'] ?? '';
+    $Correo = $_POST['Email'] ?? '';
+    $Contrasena = $_POST['password'] ?? '';
+    $PassConfirmar = $_POST['passwordcon'] ?? '';
+    
 
   
-    $Nombre     = mysqli_real_escape_string($con, $_POST['Nombre'] ?? '');
-    $Apellido   = mysqli_real_escape_string($con, $_POST['Apellido'] ?? '');
-    $Correo     = mysqli_real_escape_string($con, $_POST['Email'] ?? '');
-    $Contrasena = mysqli_real_escape_string($con, $_POST['password'] ?? '');
-    $PassConfirmar = mysqli_real_escape_string($con, $_POST['passwordcon'] ?? '');
+ 
 
 
 
     if($Contrasena != $PassConfirmar){
         echo "<script>
             alert('Las contraseñas no coinciden');
-            window.location.href = 'registro.html';
+            window.location.href = '../Vista/HTML/registro.html';
           </script>";
         exit();
         
@@ -63,25 +55,41 @@ if (isset($_POST['Nombre'])) {
 
     $contraseñaencriptada = password_hash($Contrasena, PASSWORD_DEFAULT);
     repetir();
-    $sql = "INSERT INTO Alumnos(Nombre, Apellido, Correo, Password) 
-            VALUES('$Nombre', '$Apellido', '$Correo', '$contraseñaencriptada')";
+    $sql = "INSERT INTO Alumnos(Nombre, Apellido, NombreUsuario, Correo, Password) VALUES (?,?,?,?,?)";
+    $con = new Conexion();
+    $pdo = $con->getConexion();
+    $insertar = $pdo->prepare($sql);
+
+    //El execute no me permite usar valores individuales
+
+    $datos = [
+        $Nombre,
+        $Apellido,
+        $User,
+        $Correo,
+        $contraseñaencriptada
+    ]  ;
 
 
-    if($con->query($sql) === TRUE){
-        echo "<script> alert('Registro exitoso');
-        window.location.href = 'index.php';
+    if($insertar->execute($datos)){
+           echo "<script> alert('Registro exitoso');
+        window.location.href = '../Vista/HTML/index.php';
          </script>";
-         exit();
+        
 
          session_start();
         $_SESSION['Nombre'] = $Nombre;
         $_SESSION['Apellido'] = $Apellido;
         $_SESSION['Correo'] = $Correo;
+        $_SESSION['Usuario'] = $User;
+
+         exit();
+    
 
     }
     else {
  
-        echo "Error al registrar: " . $con->error;
+        echo "Error al registrar: " . $pdo->error;
     }
 
 } else {
@@ -90,5 +98,5 @@ if (isset($_POST['Nombre'])) {
 }
 
 
-$con->close();
+
 ?>
