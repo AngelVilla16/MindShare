@@ -7,7 +7,7 @@ class Conexion{
     private $servidor = "localhost";
     private $bd = "Mindshare";
     private $usuario = "root";
-    private $pass = "rosquin987";
+    private $pass = "contraseña";
     private $charset = "utf8mb4";
 
 
