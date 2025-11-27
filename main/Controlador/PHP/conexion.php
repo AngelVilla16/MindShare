@@ -5,9 +5,9 @@ $servidor = "localhost";
 
 $usuario="root";
 
-$pass="277353";
+$pass="rosquin987";
 
-$bd="Mindshare";
+$bd="mindshare";
 
 $conn= mysqli_connect($servidor, $usuario, $pass, $bd);
 

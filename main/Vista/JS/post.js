@@ -1,11 +1,11 @@
-async function cargarpost(){
-    try{
+async function cargarpost() {
+    try {
         const respuesta = await fetch("../../Controlador/PHP/post.php");
         const posts = await respuesta.json();
 
         mostrarPost(posts)
     }
-    catch(error){
+    catch (error) {
         console.error("Error al cargar publicaciones ", error);
 
     }
@@ -31,6 +31,7 @@ function mostrarPost(posts) {
             </div>
 
             <p class="post-body">${p.Cuerpo}</p>
+            ${p.Imagen ? `<img src="${p.Imagen}" alt="Post Image" class="post-img" style="max-width: 100%; margin-top: 10px; border-radius: 8px;">` : ''}
 
             <span class="fecha">${new Date(p.Fecha).toLocaleString()}</span>
         `;
