@@ -14,8 +14,8 @@
                 <h1>
                     Nueva publicación
                 </h1>
-                <form class="post" action="../../Modelo/enviarpost.php" method="POST">
-                    <input name="archivo" type="file" >
+                <form class="post" action="../../Modelo/enviarpost.php" method="POST" enctype="multipart/form-data">
+                   <input name="archivo" type="file">
                     <label for="titulo"> Encabezado </label>
                     <input name="encabezado" type="text" required>
                     <textarea name="cuerpo" placeholder="Escribe tu descripcion, ideas, o deja fluir tu imaginacion"> </textarea>

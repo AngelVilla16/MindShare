@@ -13,10 +13,7 @@
 
 </head>
 <body>
-  <div class="captcha-container"
-     data-sitekey="0x4AAAAAACA2cfWM9xMG9_JL"
-    data-callback="captchaValidado">
-</div>
+
   <div class="contenedor">
     <div class="izquierda">
       <div class="logo">

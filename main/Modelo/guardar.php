@@ -38,7 +38,15 @@ if (isset($_POST['Nombre'])) {
     
 
   
- 
+    if(mb_strlen($Contrasena)<8){
+
+        echo "<script> 
+            alert('Tu contraseña debe tener al menos 8 caracteres');
+            window.location.href = '../Vista/HTML/registro.html';
+        
+        </script>";
+        exit();
+    }
 
 
 

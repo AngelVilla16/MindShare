@@ -35,12 +35,12 @@ if(isset($_POST['correo']) && isset($_POST['password'])){
            if(password_verify($Contrasena, $hash_almacenado)){
             $_SESSION["Correo"] = $user_data["Correo"];
             $_SESSION["Nombre"] = $user_data["Nombre"];
-            $_SESSION["APellido"] = $user_data["Apellido"];
+            $_SESSION["Apellido"] = $user_data["Apellido"];
             
             
             $_SESSION["IdAlumno"] = $row["IdAlumno"]; 
             
-            header("location: ../../Vista/HTML/mindshare.php" );
+            header("location: ../../Vista/HTML/inicio.php" );
             exit();
 
            }
