@@ -19,6 +19,7 @@ $nombre = $_SESSION["Nombre"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/estilomain.css"> 
+    <link rel="stylesheet" href="../CSS/estilocomentarios.css"> 
     <script src="../JS/post.js"></script>
     <title>MindShare - Feed</title>
 </head>

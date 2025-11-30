@@ -1,0 +1,22 @@
+<?php
+include("conexionclases.php");
+$db = new Conexion();
+$pdo = $db->getConexion();
+
+try {
+    $sql = "CREATE TABLE IF NOT EXISTS Comentarios (
+        IdComentario INT AUTO_INCREMENT PRIMARY KEY,
+        IdPost INT NOT NULL,
+        IdAlumno INT NOT NULL,
+        Comentario TEXT NOT NULL,
+        Fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (IdPost) REFERENCES Post(IdPost) ON DELETE CASCADE,
+        FOREIGN KEY (IdAlumno) REFERENCES Alumnos(IdAlumno) ON DELETE CASCADE
+    )";
+    
+    $pdo->exec($sql);
+    echo "Table Comentarios created successfully.";
+} catch (PDOException $e) {
+    echo "Error creating table: " . $e->getMessage();
+}
+?>

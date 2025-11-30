@@ -5,7 +5,7 @@ $servidor = "localhost";
 
 $usuario="root";
 
-$pass="contraseña";
+$pass="contraseña;
 
 $bd="mindshare";
 

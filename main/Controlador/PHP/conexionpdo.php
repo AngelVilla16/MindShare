@@ -2,9 +2,9 @@
 //Primero creamos variables para atraer cada valor necesario
 
 $servidor="localhost";
-$bd="Mindshare";
+$bd="mindshare";
 $usuario="root";
-$pass="277353";
+$pass="contraseña";
 
 try{
     //Crear conexion pdo
