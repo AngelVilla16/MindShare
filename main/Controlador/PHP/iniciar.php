@@ -38,7 +38,7 @@ if(isset($_POST['correo']) && isset($_POST['password'])){
             $_SESSION["Apellido"] = $user_data["Apellido"];
             
             
-            $_SESSION["IdAlumno"] = $row["IdAlumno"]; 
+            $_SESSION["IdAlumno"] = $user_data["IdAlumno"]; 
             
             header("location: ../../Vista/HTML/inicio.php" );
             exit();

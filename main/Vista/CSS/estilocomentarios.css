@@ -1,0 +1,213 @@
+/* Estilos para la sección de comentarios */
+
+:root {
+    --comment-section-border: #ddd;
+    --comment-container-bg: #fff;
+    /* Fondo del contenedor general */
+    --comment-bubble-bg: #f0f2f5;
+    /* Burbuja gris claro */
+    --comment-text: #050505;
+    --comment-author: #050505;
+    --comment-date: #65676b;
+    --input-bg: #f0f2f5;
+    --input-text: #050505;
+    --btn-action-color: #65676b;
+    --btn-action-hover: #050505;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Variables Dark Mode*/
+        --comment-section-border: #333;
+        --comment-container-bg: #252525;
+        --comment-bubble-bg: #333;
+        --comment-text: #eee;
+        --comment-author: #fff;
+        --comment-date: #aaa;
+        --input-bg: #333;
+        --input-text: #fff;
+        --btn-action-color: #aaa;
+        --btn-action-hover: #fff;
+    }
+}
+
+.comments-section {
+    margin-top: 10px;
+    border-top: 1px solid var(--comment-section-border);
+    padding-top: 10px;
+}
+
+.btn-toggle-comments {
+    background: none;
+    border: none;
+    color: var(--btn-action-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.btn-toggle-comments:hover {
+    color: var(--btn-action-hover);
+    text-decoration: underline;
+}
+
+.comments-container {
+    background-color: var(--comment-container-bg);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.comment-bubble {
+    background-color: var(--comment-bubble-bg);
+    border-radius: 18px;
+    padding: 8px 12px;
+    display: inline-block;
+    max-width: 100%;
+    color: var(--comment-text);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.comment strong {
+    color: var(--comment-author);
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 12px;
+    margin-top: 2px;
+    font-size: 0.75rem;
+}
+
+.btn-like-comment,
+.btn-reply-comment {
+    background: none;
+    border: none;
+    color: var(--btn-action-color);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0;
+}
+
+.btn-like-comment:hover,
+.btn-reply-comment:hover {
+    text-decoration: underline;
+}
+
+.btn-like-comment.liked {
+    color: #007bff;
+    /* Azul cuando está activo */
+}
+
+/* Botones de editar/eliminar (flotantes o en menu) */
+.btn-delete-comment,
+.btn-edit-comment {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.btn-delete-comment {
+    right: 0;
+    color: #ff6b6b;
+}
+
+.btn-edit-comment {
+    right: 20px;
+    color: #fcc419;
+}
+
+.btn-delete-comment:hover,
+.btn-edit-comment:hover {
+    opacity: 1;
+}
+
+
+.add-comment {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.add-comment input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+}
+
+.add-comment button {
+    background: none;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.add-comment button:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para acciones del post */
+.post-actions-bar {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--comment-section-border);
+    border-bottom: 1px solid var(--comment-section-border);
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.action-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--btn-action-color);
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .action-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.action-btn.liked {
+    color: #007bff;
+}

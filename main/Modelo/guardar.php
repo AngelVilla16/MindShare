@@ -4,6 +4,8 @@
 
 include("../Controlador/PHP/conexionclases.php");
 
+
+
 function repetir(){
    
    $db_conexion = new Conexion();
@@ -79,22 +81,24 @@ if (isset($_POST['Nombre'])) {
     ]  ;
 
 
-    if($insertar->execute($datos)){
-           echo "<script> alert('Registro exitoso');
+  if($insertar->execute($datos)){
+    $idAlumno = $pdo->lastInsertId();
+
+    // NO volver a poner session_start() aquí
+
+    $_SESSION['Nombre'] = $Nombre;
+    $_SESSION['IdAlumno'] = $idAlumno;
+    $_SESSION['Apellido'] = $Apellido;
+    $_SESSION['Correo'] = $Correo;
+    $_SESSION['Usuario'] = $User;
+
+    echo "<script> 
+        alert('Registro exitoso');
         window.location.href = '../Vista/HTML/index.php';
-         </script>";
-        
+    </script>";
 
-         session_start();
-        $_SESSION['Nombre'] = $Nombre;
-        $_SESSION['Apellido'] = $Apellido;
-        $_SESSION['Correo'] = $Correo;
-        $_SESSION['Usuario'] = $User;
-
-         exit();
-    
-
-    }
+    exit();
+}
     else {
  
         echo "Error al registrar: " . $pdo->error;

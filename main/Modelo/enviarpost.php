@@ -29,6 +29,16 @@ if(isset($_POST['encabezado']) && isset($_POST['cuerpo'])){
     $cuerpo = $_POST['cuerpo'];
     $fecha = date('Y-m-d H:i:s');
     
+    if(mb_strlen($cuerpo, 'UTF-8')>255){
+
+        echo "<script> 
+        alert('El contenido del post excede el limite de caracteres')
+        window.location.href = '../Vista/HTML/nuevopost.html';
+        </script>";
+
+        exit();
+
+    }
     $imagen = null;
     if(isset($_FILES['archivo']) && $_FILES['archivo']['error'] == 0){
         $nombre_archivo = uniqid() . "_" . basename($_FILES['archivo']['name']);
